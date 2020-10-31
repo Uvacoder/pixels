@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 export const useFetch = (url) => {
   const [status, setStatus] = useState("idle");
   const [data, setData] = useState({});
-  const authKey = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
     if (!url) return;
@@ -14,7 +13,7 @@ export const useFetch = (url) => {
         method: "GET",
         headers: {
           Accept: "application/json",
-          Authorization: authKey,
+          Authorization: process.env.REACT_APP_API_KEY,
         },
       });
       const data = await res.json();
@@ -23,7 +22,7 @@ export const useFetch = (url) => {
       console.log("done");
     };
     fetchData();
-  }, [url, authKey]);
+  }, [url]);
 
   return [status, data];
 };
