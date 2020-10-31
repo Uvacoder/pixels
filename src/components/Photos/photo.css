@@ -59,4 +59,12 @@
   transition: .3s;
   opacity: 1;
 }
+
+.download {
+  color: white;
+  margin-right: 20px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
 /*# sourceMappingURL=photo.css.map */
