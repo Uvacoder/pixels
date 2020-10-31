@@ -30,13 +30,15 @@ export default function Photos() {
           ))}
         </div>
       )}
-      {page === 1 && <button onClick={inc}>Next Page</button>}
-      {page > 1 && (
-        <>
-          <button onClick={dec}>Prev Page</button>
-          <button onClick={inc}>Next Page</button>
-        </>
-      )}
+      <span className="btns">
+        {page === 1 && <button onClick={inc}>Next Page</button>}
+        {page > 1 && (
+          <>
+            <button onClick={dec}>Prev Page</button>
+            <button onClick={inc}>Next Page</button>
+          </>
+        )}
+      </span>
     </div>
   );
 }
