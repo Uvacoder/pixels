@@ -63,7 +63,7 @@ export default function NavBar() {
         ) : (
           <div className="menu-container">
             <ul className="menu">
-              <Link onClick={toggleMenu} className="link" to="/">
+              <Link className="link" to="/">
                 <li>Home</li>
               </Link>
               <Link className="link" to="/photos">
