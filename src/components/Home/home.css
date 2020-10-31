@@ -78,6 +78,14 @@
   opacity: 1;
 }
 
+.download {
+  color: white;
+  margin-right: 20px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
   .hero-container {
     height: 40vh;
