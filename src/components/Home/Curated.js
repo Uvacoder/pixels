@@ -32,7 +32,7 @@ export default function Curated(props) {
       <h4>{props.photographer}</h4>
       <span>
         <i onClick={favorite} className="fas fa-star"></i>
-        <a onClick={download}>
+        <a onClick={download} href={props.url.original}>
           <i className="fas fa-download"></i>
         </a>
       </span>

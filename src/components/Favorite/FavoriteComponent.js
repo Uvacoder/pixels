@@ -9,8 +9,8 @@ export default function Curated(props) {
 
   const download = (e) => {
     const a = document.createElement("a");
-    a.href = data.src.original;
-    a.download = data.src.original;
+    a.href = props.url.original;
+    a.download = props.url.original;
     a.style.display = "none";
     a.click();
     a.remove();
@@ -38,7 +38,7 @@ export default function Curated(props) {
           <h4>{data.photographer}</h4>
           <span>
             <i onClick={unFavorite} className="fas fa-star"></i>
-            <a onClick={download}>
+            <a onClick={download} href={data.src.original}>
               <i className="fas fa-download"></i>
             </a>
           </span>
